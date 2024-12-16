@@ -16,5 +16,3 @@ My research interests lie at the intersection of Data Visualization, Human-AI In
 
 You can find my CV here: [Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
 
-[Email](mailto:shiwei004@e.ntu.edu.sg) / [Github](https://github.com/csw0109) / [Wechat](../images/wechat.jpg) 
-
