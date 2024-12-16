@@ -1,19 +1,22 @@
 ---
 permalink: /
-title: "Chen Shiwei's Personal Page"
+title: "Welcome to Shiwei's page!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Hi, Wellcome! I'll be Master of Engineering student from [College of Computing and Data Science (CCDS)](https://www.ntu.edu.sg/computing), [Nangyang Technological University](https://www.ntu.edu.sg/) Before that, I received my bachelor degree from Sun Yat-sen Univeristy of China at School of Intelligent System and Engineering in 2024. My research interest includes Data Visualization, Human-AI Interaction, Computer vision, and Computer graphics. 
+Hello and welcome! I will be joining the [College of Computing and Data Science (CCDS)](https://www.ntu.edu.sg/computing), [Nangyang Technological University](https://www.ntu.edu.sg/) as a Master of Engineering (M.Eng.) student in January 2025. I am excited to be supervised by [Prof. Yong Wang](http://yong-wang.org/) 
 
-I am very fortunate to be advised by [Prof. Yong Wang](http://yong-wang.org/) from [College of Computing and Data Science (CCDS)](https://www.ntu.edu.sg/computing), Nangyang Technological University. I was advised by [Prof. XX](https://XXX.pku.edu.cn/) from [School of Computer Science](https://cs.pku.edu.cn/), Peking University.
+Previously, I earned my Bachelor’s degree in 2024 from the School of Intelligent Systems and Engineering, Sun Yat-sen University, China, where I was fortunate to be mentored by [Prof. Haipeng Zeng](https://www.zenghp.org/).
+
+My research interests lie at the intersection of Data Visualization, Human-AI Interaction, Computer Vision, and Computer Graphics.
 
 You can find my CV here: [XX's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
 
 [Email](mailto:shiwei004@e.ntu.edu.sg) / [Github](https://github.com/csw0109) / [Wechat](../images/wechat.jpg) 
+
 
 A data-driven personal website
 ======
