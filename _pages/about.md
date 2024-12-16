@@ -14,7 +14,7 @@ Previously, I earned my Bachelor’s degree in 2024 from the School of Intellige
 
 My research interests lie at the intersection of Data Visualization, Human-AI Interaction, Computer Vision, and Computer Graphics.
 
-You can find my CV here: [XX's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
+You can find my CV here: [Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
 
 [Email](mailto:shiwei004@e.ntu.edu.sg) / [Github](https://github.com/csw0109) / [Wechat](../images/wechat.jpg) 
 
