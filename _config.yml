@@ -21,7 +21,7 @@ repository               : "csw0109/csw0109.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Chen Shiwei"
   pronouns         : # example: "she/her"  
   bio              : "Master of Engineering Student at Nanyang Technological University."
