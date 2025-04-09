@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 Hello and welcome!
-I will be joining the [College of Computing and Data Science (CCDS)](https://www.ntu.edu.sg/computing), [Nangyang Technological University](https://www.ntu.edu.sg/) as a Master of Engineering (M.Eng.) student in January 2025. I am excited to be supervised by [Prof. Yong Wang](http://yong-wang.org/).
+I am a Master of Engineering (M.Eng.) student in the [College of Computing and Data Science (CCDS)](https://www.ntu.edu.sg/computing), [Nangyang Technological University](https://www.ntu.edu.sg/) under the supervision of [Prof. Yong Wang](http://yong-wang.org/).
 
 Previously, I earned my Bachelor’s degree in 2024 from the School of Intelligent Systems and Engineering, Sun Yat-sen University, China, where I was fortunate to be mentored by [Prof. Haipeng Zeng](https://www.zenghp.org/).
 
