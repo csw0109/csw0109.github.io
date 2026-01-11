@@ -11,7 +11,7 @@ locale                   : "en-SG"
 title                    : "Shiwei Chen"
 title_separator          : "-"
 name                     : &name "Shiwei Chen(陈时威)"
-description              : &description "Incoming M.Eng Student at Nanyang Technological University."
+description              : &description "M.Eng Student at Nanyang Technological University."
 url                      : https://csw0109.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "csw0109/csw0109.github.io"
@@ -21,12 +21,12 @@ repository               : "csw0109/csw0109.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "Profile_new.jpg"
   name             : "Shiwei Chen"
   pronouns         : # example: "she/her"  
-  bio              : "Incoming M.Eng Student at Nanyang Technological University."
-  location         : "Wuhan, China"
-  employer         : "Nanyang Technological University."
+  bio              : "M.Eng Student at Nanyang Technological University."
+  location         : "Singapore"
+  employer         : "NTU"
   uri              : # URL
   email            : "shiwei004@e.ntu.edu.sg" 
 
@@ -78,10 +78,10 @@ author:
 publication_category:
   books:
     title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+  # manuscripts:
+  #   title: 'Journal Articles'    
+  # conferences:
+  #   title: 'Conference Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

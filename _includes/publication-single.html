@@ -1,0 +1,23 @@
+<div class="pub-item">
+    <div class="pub-details">
+        <div class="pub-title">
+            <a href="{{ post.paperurl }}">{{ post.title }}</a>
+        </div>
+        <div class="pub-row">
+            <div class="pub-authors">
+                {{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}
+            </div>
+            <div class="pub-venue-year">
+                &mdash; <i>{{ post.venue }}</i> ({{ post.date | date: "%Y" }})
+            </div>
+        </div>
+        <div class="pub-links">
+            {% if post.paperurl %}
+            <a href="{{ post.paperurl }}" class="pub-link-btn">Check Paper</a>
+            {% endif %}
+            {% if post.code %}
+            <a href="{{ post.code }}" class="pub-link-btn">Code</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -14,23 +14,18 @@ Education
 * M.Eng. CCDS, Nanyang Technological University, 2027(expected)
 * B.Eng. in Intelligence Science and Technology, Sun Yat-sen University, 2024
 
+Skills
+======
+* Coding: Python, JavaScript
+* Visualization: D3, Node, Vue
+* Libraries: LLM API, Pytorch, Pandas, Numpy etc.
+
 Research Experience
 ======
 * Winter 2022 - Summer 2024: Undergraduate Research Assistant
   * Sun Yat-sen University
-  * Duties included: Visualization, 
-  * Supervisor: Professor Haipeng Zeng
-  
-Skills
-======
-* Python
-  * Pytorch
-  * Pandas
-  * Numpy
-* Javasript
-  * D3
-  * Node
-  * Vue
+  * Duties included: Visualization System Design and Development, Data Processing, Model Training
+  * Supervisor: Assoc. Prof. Haipeng Zeng
 
 Publications
 ======

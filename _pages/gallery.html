@@ -1,0 +1,44 @@
+---
+layout: archive
+title: "Gallery"
+permalink: /gallery/
+author_profile: true
+---
+
+{% include base_path %}
+
+
+<style>
+    .justified-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        /* Small gap between photos */
+    }
+
+    /* 
+   * The trick for justified gallery:
+   * Items grow to fill rows. 
+   * Last row shouldn't stretch too crazy, handled by ::after logic usually,
+   * or just letting it be naturally left-aligned or handled by flex-grow limits.
+   */
+
+    .justified-gallery::after {
+        content: '';
+        flex-grow: 999999999;
+        min-width: 200px;
+    }
+</style>
+
+<div class="justified-gallery">
+    {% for file in site.static_files %}
+    {% if file.path contains 'images/MyLife' %}
+    {% assign ext = file.extname | downcase %}
+    {% if ext == '.jpg' or ext == '.png' or ext == '.jpeg' %}
+    {% assign filename = file.path | split: '/' | last %}
+    {% assign caption = filename | split: '.' | first %}
+    {% include gallery-item.html image_src=file.path caption=caption %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</div>

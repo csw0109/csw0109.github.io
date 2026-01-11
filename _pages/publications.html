@@ -6,31 +6,89 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+<div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar
+    profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<style>
+  .pub-item {
+    margin-bottom: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px 16px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
 
+  .pub-details {
+    width: 100%;
+  }
 
+  .pub-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
 
+  .pub-title a {
+    text-decoration: none;
+    color: #222;
+    border-bottom: none;
+  }
+
+  .pub-title a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+
+  .pub-row {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .pub-authors {
+    display: inline;
+  }
+
+  .pub-venue-year {
+    display: inline;
+    color: #666;
+  }
+
+  .pub-links {
+    display: flex;
+    gap: 12px;
+  }
+
+  .pub-link-btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0056b3;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .pub-link-btn:hover {
+    text-decoration: underline;
+    color: #003d82;
+  }
+
+  .pub-link-btn::after {
+    content: " 📄";
+    margin-left: 4px;
+    font-size: 0.8rem;
+  }
+</style>
+
+{% for post in site.publications reversed %}
+{% include publication-single.html %}
+{% endfor %}

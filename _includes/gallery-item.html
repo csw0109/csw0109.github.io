@@ -1,0 +1,34 @@
+{% include base_path %}
+
+{% if include.image_src %}
+{% assign image_path = include.image_src | prepend: base_path %}
+{% elsif post.header.teaser %}
+{% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% if teaser contains "://" %}
+{% assign image_path = teaser %}
+{% else %}
+{% assign image_path = teaser | prepend: "/images/" | prepend: base_path %}
+{% endif %}
+{% else %}
+{% assign image_path = site.teaser | prepend: "/images/" | prepend: base_path %}
+{% endif %}
+
+{% if include.caption %}
+{% assign title = include.caption %}
+{% elsif post.id %}
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+{% assign title = post.title %}
+{% endif %}
+
+<div class="gallery-item" style="flex: 1 1 auto; height: 250px; overflow: hidden; position: relative;">
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork"
+        style="height: 100%; width: 100%;">
+        {% if image_path %}
+        <div class="archive__item-teaser" style="height: 100%; width: 100%;">
+            <img src="{{ image_path }}" alt=""
+                style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 4px;">
+        </div>
+        {% endif %}
+    </article>
+</div>
