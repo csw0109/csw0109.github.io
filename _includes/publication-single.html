@@ -1,22 +1,66 @@
+{% include base_path %}
+
+{% assign pub_image = post.card_image | default: post.image | default: post.header.teaser | default: "/images/publication-icon.svg" %}
+{% assign pub_title_url = post.paperurl | default: post.arxivurl | default: post.demourl | default: post.url %}
+{% if pub_title_url contains "://" %}
+{% assign pub_href = pub_title_url %}
+{% else %}
+{% assign pub_href = pub_title_url | relative_url %}
+{% endif %}
+{% if pub_image contains "://" %}
+{% assign pub_image_src = pub_image %}
+{% else %}
+{% assign pub_image_src = pub_image | relative_url %}
+{% endif %}
+
 <div class="pub-item">
+    <a class="pub-media" href="{{ pub_href }}" aria-label="{{ post.title }}">
+        <img src="{{ pub_image_src }}" alt="{{ post.title }}">
+    </a>
+
     <div class="pub-details">
-        <div class="pub-title">
-            <a href="{{ post.paperurl }}">{{ post.title }}</a>
+        <h3 class="pub-title">
+            <a href="{{ pub_href }}">{{ post.title }}</a>
+        </h3>
+
+        {% if post.authors %}
+        <div class="pub-authors">
+            {{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}
         </div>
-        <div class="pub-row">
-            <div class="pub-authors">
-                {{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}
-            </div>
-            <div class="pub-venue-year">
-                &mdash; <i>{{ post.venue }}</i> ({{ post.date | date: "%Y" }})
-            </div>
+        {% endif %}
+
+        <div class="pub-venue">
+            {% if post.venue_short %}
+            <span class="pub-venue-badge pub-venue-{{ post.venue_short | slugify }}">{{ post.venue_short }}</span>
+            {% endif %}
+            <span>{{ post.venue }}</span>
+            {% if post.status %}
+            <span class="pub-status">{{ post.status }}</span>
+            {% endif %}
         </div>
+
+        {% if post.excerpt %}
+        <p class="pub-excerpt">{{ post.excerpt }}</p>
+        {% endif %}
+
         <div class="pub-links">
             {% if post.paperurl %}
-            <a href="{{ post.paperurl }}" class="pub-link-btn">Check Paper</a>
+            <a href="{{ post.paperurl }}" class="pub-link-btn">Paper</a>
+            {% endif %}
+            {% if post.arxivurl %}
+            <a href="{{ post.arxivurl }}" class="pub-link-btn">arXiv</a>
+            {% endif %}
+            {% if post.doiurl %}
+            <a href="{{ post.doiurl }}" class="pub-link-btn">DOI</a>
+            {% endif %}
+            {% if post.demourl %}
+            <a href="{{ post.demourl }}" class="pub-link-btn">Demo</a>
             {% endif %}
             {% if post.code %}
             <a href="{{ post.code }}" class="pub-link-btn">Code</a>
+            {% endif %}
+            {% if post.slidesurl %}
+            <a href="{{ post.slidesurl }}" class="pub-link-btn">Slides</a>
             {% endif %}
         </div>
     </div>

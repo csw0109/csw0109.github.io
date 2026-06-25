@@ -6,6 +6,11 @@ permalink: /publication/2025-01-01-pretrained-models
 date: 2025-01-01
 venue: 'Physical Chemistry Chemical Physics'
 venue_short: 'PCCP'
-authors: 'E Zhang, Z Pan, Z Yao, T Dong, G Chen, T Deng, **S Chen**, CYC Chen'
+authors: 'Erdong Zhang, Zilin Pan, Zequan Yao, Tiejun Dong, Guanxing Chen, Tingwen Deng, **Shiwei Chen**, Calvin Yu-Chian Chen'
+first_author: false
+author_position: 7
+author_order: "07"
 paperurl: 'https://pubs.rsc.org/en/content/articlehtml/2025/cp/d5cp00785b'
+image: '/images/publications/2025-pretrained-models-teaser.gif'
+card_image: '/images/publications/2025-pretrained-models-teaser.gif'
 ---
