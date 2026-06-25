@@ -46,6 +46,10 @@
     background: #f7fbff;
   }
 
+  body.is-suppressing-pub-hover .pub-item:hover:not(.is-highlighted) {
+    background: #fff;
+  }
+
   .pub-item:target,
   .pub-item.is-highlighted {
     background: #f7fbff;
@@ -64,6 +68,11 @@
   .pub-item:hover .pub-media {
     box-shadow: 0 6px 18px rgba(24, 33, 47, 0.12);
     transform: scale(1.01);
+  }
+
+  body.is-suppressing-pub-hover .pub-item:hover:not(.is-highlighted) .pub-media {
+    box-shadow: none;
+    transform: none;
   }
 
   .pub-media img {
@@ -254,6 +263,15 @@
     transform: translate(0, -50%) scale(1);
   }
 
+  body.is-suppressing-pub-hover .pub-item:hover:not(.is-highlighted) .pub-note {
+    opacity: 0;
+    transform: translate(0.45rem, -50%) scale(0.98);
+  }
+
+  body.is-suppressing-pub-hover .pub-item:hover:not(.is-highlighted) .pub-note.is-left {
+    transform: translate(-0.45rem, -50%) scale(0.98);
+  }
+
   .pub-note-header {
     display: flex;
     align-items: center;
@@ -325,6 +343,15 @@
       padding-top: 0.72rem;
       padding-bottom: 0.72rem;
       transform: translateY(0);
+    }
+
+    body.is-suppressing-pub-hover .pub-item:hover:not(.is-highlighted) .pub-note {
+      max-height: 0;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      opacity: 0;
+      transform: translateY(-0.2rem);
     }
   }
 </style>

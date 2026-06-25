@@ -367,6 +367,16 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
 
   var publicationHighlightTimeout;
   var publicationNotePositionFrame;
+  var publicationHoverSuppressTimeout;
+
+  function suppressPublicationHover() {
+    window.clearTimeout(publicationHoverSuppressTimeout);
+    document.body.classList.add('is-suppressing-pub-hover');
+
+    publicationHoverSuppressTimeout = window.setTimeout(function() {
+      document.body.classList.remove('is-suppressing-pub-hover');
+    }, 1400);
+  }
 
   function positionHighlightedPublicationNotes() {
     document.querySelectorAll('.pub-item.is-highlighted').forEach(function(item) {
@@ -385,6 +395,7 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
 
   function highlightPublications(targets) {
     window.clearTimeout(publicationHighlightTimeout);
+    suppressPublicationHover();
 
     document.querySelectorAll('.pub-item.is-highlighted').forEach(function(item) {
       item.classList.remove('is-highlighted');
