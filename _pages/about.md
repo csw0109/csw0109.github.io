@@ -84,7 +84,7 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
     margin: 1.2rem 0 1.45rem;
   }
 
-  .latest-news-title {
+  .page__content .latest-news-title {
     display: flex;
     align-items: center;
     gap: 0.45rem;
@@ -98,7 +98,7 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
     letter-spacing: 0;
   }
 
-  .latest-news-title::after {
+  .page__content .latest-news-title::after {
     content: "";
     flex: 1 1 auto;
     border-top: 1px solid #dfe4ec;
