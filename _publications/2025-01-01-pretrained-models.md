@@ -1,5 +1,5 @@
 ---
-title: "Pre-trained language models for protein and molecular design"
+title: "Pre-Trained Language Models for Protein and Molecular Design"
 collection: publications
 category: manuscripts
 permalink: /publication/2025-01-01-pretrained-models
@@ -13,5 +13,5 @@ author_order: "07"
 paperurl: 'https://pubs.rsc.org/en/content/articlehtml/2025/cp/d5cp00785b'
 image: '/images/publications/2025-pretrained-models-teaser.gif'
 card_image: '/images/publications/2025-pretrained-models-teaser.gif'
-excerpt: 'This review summarizes pre-trained language models for protein and molecular design.'
+excerpt: 'This survey summarizes pre-trained language models, datasets, and applications for protein prediction, generation, and molecular design.'
 ---

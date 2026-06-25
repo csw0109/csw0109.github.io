@@ -15,11 +15,27 @@ I am a Master of Engineering (M.Eng.) student in the College of Computing and Da
 I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, and *collaborate* 🤝.
 
 <div class="interest-tags">
-  <button type="button" data-pub-target="first">VISxAI</button>
-  <button type="button" data-pub-target="#pub-2026-04-06-reasondiag">Human-AI Collaboration</button>
-  <button type="button" data-pub-target="#pub-2026-04-06-reasondiag">LLM Reasoning Diagnosis</button>
-  <button type="button" data-pub-target="#pub-2026-06-01-semiconlens">AI for Science</button>
-  <button type="button" data-pub-target="#pub-2025-08-01-huge-generation">Controllable Generation</button>
+  <div class="interest-tag-group">
+    <button class="interest-tag interest-tag-parent" type="button" data-pub-target="#pub-2026-04-06-reasondiag, #pub-2026-06-01-semiconlens,#pub-2025-08-01-huge-generation">VISxAI</button>
+    <div class="interest-tag-children" aria-label="VISxAI subtopics">
+      <button class="interest-tag interest-tag-child" type="button" data-pub-target="#pub-2026-04-06-reasondiag">LLM Reasoning Diagnosis</button>
+      <button class="interest-tag interest-tag-child" type="button" data-pub-target="#pub-2026-06-01-semiconlens,#pub-2025-08-01-huge-generation">Visual Analytics with AI</button>
+    </div>
+  </div>
+  <div class="interest-tag-group">
+    <button class="interest-tag interest-tag-parent" type="button" data-pub-target="#pub-2026-04-06-reasondiag, #pub-2025-08-01-huge-generation">Human-AI Collaboration</button>
+    <div class="interest-tag-children" aria-label="Human-AI Collaboration subtopics">
+      <button class="interest-tag interest-tag-child" type="button" data-pub-target="#pub-2026-04-06-reasondiag">LLM Reasoning Diagnosis</button>
+      <button class="interest-tag interest-tag-child" type="button" data-pub-target="#pub-2025-08-01-huge-generation">Controllable Image Generation</button>
+    </div>
+  </div>
+  <div class="interest-tag-group">
+    <button class="interest-tag interest-tag-parent" type="button" data-pub-target="#pub-2026-06-01-semiconlens, #pub-2025-01-01-pretrained-models">AI for Science</button>
+    <div class="interest-tag-children" aria-label="AI for Science subtopics">
+      <button class="interest-tag interest-tag-child" type="button" data-pub-target="#pub-2026-06-01-semiconlens">2D Semiconductor Discovery</button>
+      <button class="interest-tag interest-tag-child" type="button" data-pub-target="#pub-2025-01-01-pretrained-models">Protein &amp; Molecular Design</button>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -46,15 +62,75 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
   }
 
   .interest-tags {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.38rem;
-    margin: -0.55rem 0 1.2rem;
+    gap: 0.48rem 0.55rem;
+    align-items: flex-start;
+    margin: -0.5rem 0 1.25rem;
+  }
+
+  .interest-tag-group {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    transition: margin-bottom 0.2s ease;
+  }
+
+  .interest-tag-group::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    width: max(100%, 10rem);
+    height: 0.42rem;
+  }
+
+  .interest-tag-group:hover,
+  .interest-tag-group:focus-within {
+    margin-bottom: 3.85rem;
+  }
+
+  .interest-tag-children {
+    position: absolute;
+    top: calc(100% + 0.3rem);
+    left: 0.72rem;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: max-content;
+    gap: 0.22rem;
+    margin: 0;
+    padding-left: 0.68rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-0.12rem);
+    visibility: hidden;
+    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease;
+  }
+
+  .interest-tag-group:hover .interest-tag-children,
+  .interest-tag-group:focus-within .interest-tag-children {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .interest-tag-children::before {
+    content: "";
+    position: absolute;
+    top: -0.3rem;
+    bottom: 0.62rem;
+    left: 0.16rem;
+    border-left: 1px solid #cbd8e8;
   }
 
   .interest-tags span,
   .interest-tags a,
   .interest-tags button {
+    position: relative;
     display: inline-flex;
     align-items: center;
     border: 1px solid #d7e1ec;
@@ -68,6 +144,29 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
     font-weight: 560;
     line-height: 1.35;
     text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .interest-tags .interest-tag-parent {
+    border-color: #b7cce3;
+    background: #eef6ff;
+    color: #1f4f8f;
+  }
+
+  .interest-tags .interest-tag-child {
+    padding: 0.12rem 0.44rem;
+    background: #fff;
+    font-size: 0.7rem;
+    font-weight: 540;
+  }
+
+  .interest-tags .interest-tag-child::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 1px);
+    width: 0.52rem;
+    border-top: 1px solid #cbd8e8;
   }
 
   .interest-tags a:hover,
@@ -147,6 +246,36 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
   }
 
   @media (max-width: 640px) {
+    .interest-tags {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .interest-tags button {
+      white-space: normal;
+      text-align: left;
+    }
+
+    .interest-tag-group {
+      width: 100%;
+    }
+
+    .interest-tag-children {
+      gap: 0.28rem;
+      grid-template-columns: minmax(0, 1fr);
+      width: min(22rem, calc(100vw - 5rem));
+    }
+
+    .interest-tag-group:hover .interest-tag-children,
+    .interest-tag-group:focus-within .interest-tag-children {
+      margin-bottom: 0;
+    }
+
+    .interest-tag-group:hover,
+    .interest-tag-group:focus-within {
+      margin-bottom: 7.6rem;
+    }
+
     .news-list li {
       grid-template-columns: 1fr;
       row-gap: 0.05rem;
@@ -171,7 +300,7 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
       <span class="news-date">Jun, 2026</span>
     </li>
     <li>
-      <span class="news-text"><a href="https://www.sciencedirect.com/science/article/pii/S2468502X25000452">HuGe</a> was published in <em>Visual Informatics</em>.</span>
+      <span class="news-text"><a href="https://doi.org/10.1016/j.visinf.2025.100262">HuGe</a> was published in <em>Visual Informatics</em>.</span>
       <span class="news-date">Aug, 2025</span>
     </li>
     <li>
@@ -236,38 +365,70 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
     });
   }
 
-  function highlightPublication(target) {
+  var publicationHighlightTimeout;
+  var publicationNotePositionFrame;
+
+  function positionHighlightedPublicationNotes() {
+    document.querySelectorAll('.pub-item.is-highlighted').forEach(function(item) {
+      positionPublicationNote(item);
+    });
+  }
+
+  function scheduleHighlightedPublicationNotePosition() {
+    if (publicationNotePositionFrame) return;
+
+    publicationNotePositionFrame = window.requestAnimationFrame(function() {
+      publicationNotePositionFrame = null;
+      positionHighlightedPublicationNotes();
+    });
+  }
+
+  function highlightPublications(targets) {
+    window.clearTimeout(publicationHighlightTimeout);
+
     document.querySelectorAll('.pub-item.is-highlighted').forEach(function(item) {
       item.classList.remove('is-highlighted');
     });
 
-    target.classList.add('is-highlighted');
-    window.setTimeout(function() {
-      target.classList.remove('is-highlighted');
-      if (window.location.hash === '#' + target.id) {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
-      }
+    targets.forEach(function(target) {
+      target.classList.add('is-highlighted');
+    });
+    scheduleHighlightedPublicationNotePosition();
+
+    publicationHighlightTimeout = window.setTimeout(function() {
+      targets.forEach(function(target) {
+        target.classList.remove('is-highlighted');
+      });
     }, 2600);
   }
 
-  function getPublicationTarget(targetId) {
+  function getPublicationTargets(targetId) {
     if (targetId === 'first' || targetId === '#publications') {
-      return document.querySelector('.pub-item');
+      var firstTarget = document.querySelector('.pub-item');
+      return firstTarget ? [firstTarget] : [];
     }
 
-    return document.querySelector(targetId);
+    return targetId.split(',').map(function(selector) {
+      return selector.trim();
+    }).filter(Boolean).map(function(selector) {
+      return document.querySelector(selector);
+    }).filter(Boolean);
+  }
+
+  function getPublicationTarget(targetId) {
+    return getPublicationTargets(targetId)[0] || null;
   }
 
   document.querySelectorAll('.interest-tags [data-pub-target]').forEach(function(control) {
     control.addEventListener('click', function() {
-      var target = getPublicationTarget(control.getAttribute('data-pub-target'));
-      if (!target) return;
+      var targets = getPublicationTargets(control.getAttribute('data-pub-target'));
+      if (!targets.length) return;
 
       control.blur();
       window.requestAnimationFrame(function() {
-        scrollPublicationToCenter(target, 'smooth');
+        scrollPublicationToCenter(targets[0], 'smooth');
       });
-      highlightPublication(target);
+      highlightPublications(targets);
     });
   });
 
@@ -281,7 +442,7 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
       window.requestAnimationFrame(function() {
         scrollPublicationToCenter(target, 'smooth');
       });
-      highlightPublication(target);
+      highlightPublications([target]);
     });
   });
 
@@ -292,7 +453,10 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
 
     setTimeout(function() {
       scrollPublicationToCenter(target, 'smooth');
-      highlightPublication(target);
+      highlightPublications([target]);
+      if (window.location.hash === '#' + target.id) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
     }, 120);
   });
 
@@ -304,4 +468,7 @@ I want to build tools that make AI easier to *inspect* 🔍, *control* 🎛️, 
       positionPublicationNote(item);
     });
   });
+
+  window.addEventListener('scroll', scheduleHighlightedPublicationNotePosition, { passive: true });
+  window.addEventListener('resize', scheduleHighlightedPublicationNotePosition);
 </script>

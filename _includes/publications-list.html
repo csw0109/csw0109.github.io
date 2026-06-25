@@ -242,13 +242,15 @@
   }
 
   .pub-item:hover .pub-note,
-  .pub-item:focus-within .pub-note {
+  .pub-item:focus-within .pub-note,
+  .pub-item.is-highlighted .pub-note {
     opacity: 1;
     transform: translate(0, -50%) scale(1);
   }
 
   .pub-item:hover .pub-note.is-left,
-  .pub-item:focus-within .pub-note.is-left {
+  .pub-item:focus-within .pub-note.is-left,
+  .pub-item.is-highlighted .pub-note.is-left {
     transform: translate(0, -50%) scale(1);
   }
 
@@ -316,7 +318,8 @@
     }
 
     .pub-item:hover .pub-note,
-    .pub-item:focus-within .pub-note {
+    .pub-item:focus-within .pub-note,
+    .pub-item.is-highlighted .pub-note {
       max-height: 8rem;
       margin-top: 0.45rem;
       padding-top: 0.72rem;

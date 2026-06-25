@@ -265,19 +265,19 @@ redirect_from:
       </li>
       <li>
         Yuanzhi Zeng, Shuxian Gu, <strong>Shiwei Chen</strong>, Yong Wang, and Haipeng Zeng.
-        "TMSeer: Visual analysis of city-level travel modes using cellular signaling data."
+        "TMSeer: Visual Analysis of City-Level Travel Modes Using Cellular Signaling Data."
         <em>Visual Informatics</em>, 2026.
         <a href="https://doi.org/10.1016/j.visinf.2026.100310">DOI</a>
       </li>
       <li>
         Yuanzhi Zeng, <strong>Shiwei Chen</strong>, Yutian Zhang, Dong Sun, Yong Wang, and Haipeng Zeng.
-        "HuGe: Towards Human-controllable image Generation in autonomous driving."
+        "HuGe: Towards Human-Controllable Image Generation in Autonomous Driving."
         <em>Visual Informatics</em>, 2025.
-        <a href="https://www.sciencedirect.com/science/article/pii/S2468502X25000452">Paper</a>
+        <a href="https://doi.org/10.1016/j.visinf.2025.100262">Paper</a>
       </li>
       <li>
         Erdong Zhang, Zilin Pan, Zequan Yao, Tiejun Dong, Guanxing Chen, Tingwen Deng, <strong>Shiwei Chen</strong>, and Calvin Yu-Chian Chen.
-        "Pre-trained language models for protein and molecular design."
+        "Pre-Trained Language Models for Protein and Molecular Design."
         <em>Physical Chemistry Chemical Physics</em>, 2025.
         <a href="https://pubs.rsc.org/en/content/articlehtml/2025/cp/d5cp00785b">Paper</a>
       </li>

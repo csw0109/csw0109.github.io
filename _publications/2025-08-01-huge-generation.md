@@ -1,5 +1,5 @@
 ---
-title: "HuGe: Towards Human-controllable image Generation in autonomous driving"
+title: "HuGe: Towards Human-Controllable Image Generation in Autonomous Driving"
 collection: publications
 category: manuscripts
 permalink: /publication/2025-08-01-huge-generation
@@ -10,8 +10,8 @@ authors: 'Yuanzhi Zeng, **Shiwei Chen**, [Yutian Zhang](https://johnnyzhang99.gi
 first_author: false
 author_position: 2
 author_order: "02"
-paperurl: 'https://www.sciencedirect.com/science/article/pii/S2468502X25000452'
+paperurl: 'https://doi.org/10.1016/j.visinf.2025.100262'
 image: '/images/publications/2025-huge-teaser.png'
 card_image: '/images/publications/2025-huge-teaser.png'
-excerpt: 'HuGe supports human-controllable image generation for autonomous driving scenarios.'
+excerpt: 'HuGe enables controllable generation and evaluation of rare autonomous-driving scenarios with weather transformation and knowledge-guided object insertion.'
 ---
