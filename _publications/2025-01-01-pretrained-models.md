@@ -13,4 +13,5 @@ author_order: "07"
 paperurl: 'https://pubs.rsc.org/en/content/articlehtml/2025/cp/d5cp00785b'
 image: '/images/publications/2025-pretrained-models-teaser.gif'
 card_image: '/images/publications/2025-pretrained-models-teaser.gif'
+excerpt: 'This review summarizes pre-trained language models for protein and molecular design.'
 ---

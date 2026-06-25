@@ -12,8 +12,9 @@
 {% else %}
 {% assign pub_image_src = pub_image | relative_url %}
 {% endif %}
+{% assign pub_anchor = post.permalink | default: post.url | remove_first: "/publication/" | remove: "/" | prepend: "pub-" %}
 
-<div class="pub-item">
+<div class="pub-item" id="{{ pub_anchor }}">
     <a class="pub-media" href="{{ pub_href }}" aria-label="{{ post.title }}">
         <img src="{{ pub_image_src }}" alt="{{ post.title }}">
     </a>
@@ -39,10 +40,6 @@
             {% endif %}
         </div>
 
-        {% if post.excerpt %}
-        <p class="pub-excerpt">{{ post.excerpt }}</p>
-        {% endif %}
-
         <div class="pub-links">
             {% if post.paperurl %}
             <a href="{{ post.paperurl }}" class="pub-link-btn">Paper</a>
@@ -63,5 +60,17 @@
             <a href="{{ post.slidesurl }}" class="pub-link-btn">Slides</a>
             {% endif %}
         </div>
+
     </div>
+
+    {% if post.excerpt %}
+    <aside class="pub-note" aria-label="Publication note">
+        <div class="pub-note-header">
+            <img src="{{ '/images/Profile_new.jpg' | relative_url }}" alt="">
+            <span class="pub-note-author">Shiwei Chen</span>
+            <span class="pub-note-time">note</span>
+        </div>
+        <p>{{ post.excerpt }}</p>
+    </aside>
+    {% endif %}
 </div>

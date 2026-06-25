@@ -6,7 +6,7 @@ permalink: /publication/2026-06-01-semiconlens
 date: 2026-06-01
 venue: 'Computer Graphics Forum, Nottingham, UK'
 venue_short: 'EuroVis 2026'
-authors: '[Kavinda Athapaththu](https://kavinda.lk/), **Shiwei Chen**, [Yuan Fang](https://www.yfang.site/), Sanchali Mitra, Yee Sin Ang, [Yong Wang](https://yong-wang.org/)'
+authors: '[Kavinda Athapaththu](https://kavinda.lk/), **Shiwei Chen**, [Yuan Fang](https://www.yfang.site/), Sanchali Mitra, [Yee Sin Ang](https://www.sutd.edu.sg/profile/ang-yee-sin), [Yong Wang](https://yong-wang.org/)'
 first_author: false
 author_position: 2
 author_order: "02"
