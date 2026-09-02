@@ -12,7 +12,11 @@ redirect_from:
 I am a Master of Engineering (M.Eng.) student in the College of Computing and Data Science (CCDS), Nanyang Technological University under the supervision of [Prof. Yong Wang](http://yong-wang.org/).
 
 ## Research Interests
-My research explores how interactive visual tools can reveal AI behavior, support meaningful human intervention, and enable more effective human–AI teamwork.
+My research explores how interactive visual tools can make AI systems more transparent, responsive, and useful to people.
+
+- 🔍 **Reveal AI behavior** through visual and interactive analysis.
+- 🎛️ **Support human intervention** in how AI reasons and responds.
+- 🤝 **Enable effective human–AI teamwork** in real-world tasks.
 
 <div class="interest-tags">
   <div class="interest-tag-group">
