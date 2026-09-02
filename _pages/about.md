@@ -12,11 +12,13 @@ redirect_from:
 I am a Master of Engineering (M.Eng.) student in the College of Computing and Data Science (CCDS), Nanyang Technological University under the supervision of [Prof. Yong Wang](http://yong-wang.org/).
 
 ## Research Interests
-I design interactive visual tools for human-centered AI.
+<p class="research-summary">I design interactive visual tools for human-centered AI.</p>
 
-- 🔍 **Reveal AI behavior** through visual and interactive analysis.
-- 🎛️ **Support human intervention** in how AI reasons and responds.
-- 🤝 **Enable effective human–AI teamwork** in real-world tasks.
+<ul class="research-goals">
+  <li>🔍 <strong>Reveal AI behavior</strong> through visual and interactive analysis.</li>
+  <li>🎛️ <strong>Support human intervention</strong> in how AI reasons and responds.</li>
+  <li>🤝 <strong>Enable effective human–AI teamwork</strong> in real-world tasks.</li>
+</ul>
 
 <div class="interest-tags">
   <div class="interest-tag-group">
@@ -65,13 +67,27 @@ I design interactive visual tools for human-centered AI.
     line-height: 1.28;
   }
 
+  .page__content > .research-summary {
+    margin-bottom: 0.55rem;
+  }
+
+  .research-goals {
+    margin: 0 0 0.9rem;
+    padding-left: 1.55rem;
+  }
+
+  .research-goals li {
+    margin: 0.18rem 0;
+    line-height: 1.45;
+  }
+
   .interest-tags {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 0.48rem 0.55rem;
     align-items: flex-start;
-    margin: -0.5rem 0 1.25rem;
+    margin: 0 0 1.25rem;
   }
 
   .interest-tag-group {
