@@ -27,6 +27,7 @@
       <div class="tabs" role="tablist" aria-label="System views">
         <button id="tab-circuit" role="tab" aria-selected="true" aria-controls="view-panel" data-view="circuit">01 <span>Circuit exploration</span></button>
         <button id="tab-heatmap" role="tab" aria-selected="false" aria-controls="view-panel" tabindex="-1" data-view="heatmap">02 <span>Feature inspection</span></button>
+        <button id="tab-steering" role="tab" aria-selected="false" aria-controls="view-panel" tabindex="-1" data-view="steering">03 <span>Steering experiments</span></button>
       </div>
       <figure id="view-panel" role="tabpanel" aria-labelledby="tab-circuit">
         <button class="image-button" id="enlarge" aria-label="Enlarge system screenshot"><img id="system-image" src="assets/circuit.png" alt="Circuit Explorer showing the Basketball cluster and its connections to the basketball output for the Michael Jordan prompt." width="2764" height="1404"><span class="enlarge-label">⤢ View full size</span></button>
@@ -45,7 +46,7 @@
       <div class="steps">
         <article><span class="step-number">01</span><h3>Explore the structure</h3><p>Start with a prompt and an output token. Navigate semantic clusters and filter the graph to focus on relevant features and connections.</p><button class="text-link" data-jump="circuit">See the circuit view <span aria-hidden="true">↗</span></button></article>
         <article><span class="step-number">02</span><h3>Inspect the evidence</h3><p>Locate features across model layers and token positions. Examine descriptions, activations, and associations to build an interpretation.</p><button class="text-link" data-jump="heatmap">See feature inspection <span aria-hidden="true">↗</span></button></article>
-        <article><span class="step-number">03</span><h3>Investigate with steering</h3><p>Adjust selected features at token positions and compare steered outputs with a baseline to investigate a hypothesis.</p><a class="text-link" href="#user-guide">Watch the video guide <span aria-hidden="true">↓</span></a></article>
+        <article><span class="step-number">03</span><h3>Investigate with steering</h3><p>Adjust selected features at token positions and compare steered outputs with a baseline to investigate a hypothesis.</p><button class="text-link" data-jump="steering">See steering experiments <span aria-hidden="true">↗</span></button></article>
       </div>
     </section>
 
