@@ -1,7 +1,7 @@
 const views = {
   circuit: {image:'assets/circuit.png', title:'Explore the connections behind an output.', description:'Explore the Basketball cluster and its connections to the selected basketball output token.', alt:'Circuit Explorer showing the Basketball cluster and its connections to the basketball output for the Michael Jordan prompt.'},
   heatmap: {image:'assets/heatmap.png', title:'Inspect features across layers and tokens.', description:'Inspect the Basketball cluster’s feature-position heatmap alongside its circuit graph and feature list.', alt:'Michael Jordan circuit with the Basketball feature-position heatmap and a list of 13 features in the right-hand panel.'},
-  steering: {image:'assets/steering.png', title:'Compare a hypothesis with an intervention.', description:'Set token-level interventions and compare baseline and steered outputs in the same workspace.', alt:'Steering experiment comparing baseline and steered outputs for the Dallas prompt.'}
+  steering: {image:'assets/steering.png', title:'Compare a hypothesis with an intervention.', description:'In this example, steering the Basketball cluster at the Jordan token changes the output from basketball to golf.', alt:'Michael Jordan steering experiment: the baseline output is basketball and the steered output is golf, with a -4.3 intervention at the Jordan token.'}
 };
 const tabs = [...document.querySelectorAll('[data-view]')];
 const img = document.querySelector('#system-image');
